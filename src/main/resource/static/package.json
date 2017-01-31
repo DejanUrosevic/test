@@ -1,30 +1,6 @@
-{
-  "name": "big-package",
-  "version": "1.0.0",
-  "author": "Jan Šulja",
-  "scripts": {
-    "test": "karma start tests/karma.conf.js"
-  },
-  "devDependencies": {
-    "bower-main": "^0.2.14",
-    "gulp": "^3.9.1",
-    "gulp-angular-filesort": "^1.1.1",
-    "gulp-clean-css": "^2.3.2",
-    "gulp-concat": "^2.6.0",
-    "gulp-concat-vendor": "0.0.4",
-    "gulp-debug": "^3.0.0",
-    "gulp-delete-lines": "0.0.7",
-    "gulp-insert-lines": "0.0.4",
-    "gulp-jshint": "^2.0.4",
-    "gulp-print": "^2.0.1",
-    "gulp-remove-empty-lines": "0.0.8",
-    "gulp-rename": "^1.2.2",
-    "gulp-uglify": "^1.4.0",
-    "jasmine-core": "^2.5.2",
-    "jshint": "^2.9.4",
-    "karma": "^1.4.0",
-    "karma-chrome-launcher": "^2.0.0",
-    "karma-jasmine": "^1.1.0",
-    "karma-spec-reporter": "0.0.26"
-  }
+"dependencies": {
+    "bower": "0.6.x"
+},
+"scripts": {
+    "postinstall": "./node_modules/bower/bin/bower install"
 }
