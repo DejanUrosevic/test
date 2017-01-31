@@ -1,0 +1,40 @@
+{
+  "name": "sep.bolt.insurance.group",
+  "homepage": "https://github.com/for3v3rInFriendZone/BoltInsuranceGroup",
+  "authors": [
+    "jansulja <shuky11@rocketmail.com>",
+    "for3v3rInFriendZone <strile93@gmail.com>"
+  ],
+  "description": "",
+  "main": "index.html",
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "angularjs#^1.6.1",
+    "angular-ui-router": "^0.3.2",
+    "angular-scroll": "^1.0.0",
+    "angular-scroll-animate": "^0.9.9",
+    "angular-bootstrap": "^2.1.4",
+    "restangular": "^1.5.2",
+    "angularjs-datepicker": "^2.1.7",
+    "angular-fancy-modal": "^0.1.4",
+    "angular-local-storage": "^0.5.2",
+    "angular-sanitize": "^1.6.1",
+    "angular-cryptography": "^1.0.1",
+    "angular-animate": "^1.6.1",
+    "angular-translate": "^2.13.1"
+  },
+  "resolutions": {
+    "angular": "^1.5.8"
+  },
+  "devDependencies": {
+    "angular-mocks": "^1.6.1"
+  }
+}

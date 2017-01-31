@@ -1,0 +1,203 @@
+<div style="background: #f7f7f7;" id="all">
+  <div class="clearfix">
+      <div class="item">
+          <div class="container text-white">
+            <br/><br/><br/><br/><br/>
+          	<h2 class="text-center" translate="TRAVELINSURANCE"></h2> 
+          	<br/>
+          	<hr style="border: 1; height: 1px; background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(135, 206, 250, 0.75), rgba(0, 0, 0, 0));" />
+          	<div class="row">
+          		<div class="col-md-8 col-md-offset-2">
+					<p class="text-center" style="color: green;" translate="PAYPALLPAGE"> </p>
+				</div>
+			</div>
+			<br/><br/>
+			<hr style="border: 1; height: 1px; background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(135, 206, 250, 0.75), rgba(0, 0, 0, 0));" />
+			<div class="row">
+				<div class="col-md-8 col-md-offset-2">
+					<div class="text-center">
+						
+						<table class="table table-hover ">
+	                    	<thead>
+	                        	<th class="info text-center" colspan="2" translate="INSURANCEPOLICY">
+	                        	</th>                        
+	                        </thead>
+	                        <thead>
+	                        	<th class="success text-center" translate="TRAVELINSURANCE">
+	                        	</th>
+	                        </thead>
+	                        <tbody>
+		                    	<tr>
+		                    		<td class="text-center">
+										<span translate="REGION"> </span>: <b translate="{{pic.world}}"></b>
+		                    		</td>
+						        </tr>
+						        <tr>
+		                    		<td class="text-center">
+										<span translate="INSUREDSUM"> </span>: <b> {{pic.money}}</b> <i class="fa fa-eur"> </i>
+		                    		</td>
+						        </tr>
+						        <tr>
+		                    		<td class="text-center">
+										<span translate="NUMBEROFINSURANCEUSERS"> </span>: <br/>
+										1. <span translate="KIDS"> </span>: <b> {{pic.kids}}</b> <br/>
+										&nbsp 2. <span translate="GROWNUPS"> </span>:  <b> {{pic.grownups}}</b> <br/>
+										3. <span translate="OLDS"> </span>:  <b> {{pic.olds}}</b> <br/>
+		                    		</td>
+						        </tr>
+						        <tr>
+		                    		<td class="text-center">
+										<span translate="EFFECTIVEDATE"> </span>: <br/>
+										<b> {{pic.dt1 | date:'dd.MM.yyyy'}} </b> do <b> {{pic.dt2 | date:'dd.MM.yyyy'}}</b>
+		                    		</td>
+						        </tr>
+						        <tr ng-if="sportCheckBox">
+		                    		<td class="text-center">
+										<span translate="SPORTCHOSEN"> </span>: <b> {{pic.selectedSport.subname}}</b>
+		                    		</td>
+						        </tr>
+		                    </tbody>
+	                    </table>
+
+	                    <hr style="border: 1; height: 1px; background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(135, 206, 250, 0.75), rgba(0, 0, 0, 0));" />
+	                    <br/>
+	                    <br/>
+	                    
+	                    <table class="table table-hover" ng-if="homeCheckBox">
+	                        <thead>
+	                        	<th class="success text-center" translate="INSURANCEHOMEORFLAT">
+	                        	</th>
+	                        </thead>
+	                        <tbody>	                    
+						        <tr>
+		                    		<td class="text-center">
+										<span translate="PROTECTIONAGAINST"></span>: <b ng-if="fire" translate="FIRE"></b> <b ng-if="flood" translate="FLOOD"></b> <b ng-if="theft" translate="THEFT"></b> <b ng-if="earthshaker" translate="EARTHSHAKE"></b>
+		                    		</td>
+		                    	</tr>
+		                    </tbody>
+		                    <thead>
+	                        	<th class="success text-center" style="background-color: #ffff66;" translate="INFOOWNERHOME">
+	                        	</th>
+	                        </thead>
+	                        <tbody>
+		                    	<tr>
+		                    		<td class="text-center">
+										<span translate="OWNERNAME"></span>: <b> {{pic.homeOwnerName}}</b>
+		                    		</td>
+		                    	</tr>
+		                    	<tr>
+		                    		<td class="text-center">
+										<span translate="OWNERSURNAME"></span>: <b> {{pic.homeOwnerSurname}}</b>
+		                    		</td>
+		                    	</tr>
+		                    	<tr>
+		                    		<td class="text-center">
+										<span translate="OWNERJMBG"></span>: <b> {{pic.homeOwnerJmbg}}</b>
+		                    		</td>
+		                    	</tr>
+		                    	<tr>
+		                    		<td class="text-center">
+										<span translate="ADDRESSOFHOME"></span>: <b> {{pic.homeAdress}}</b>
+		                    		</td>
+		                    	</tr>
+		                    </tbody>
+	                    </table>           
+
+	                    <hr ng-if="homeCheckBox" style="border: 1; height: 1px; background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(135, 206, 250, 0.75), rgba(0, 0, 0, 0));" />
+	                    <br/>
+	                    <br/>
+	                    
+	                    <table class="table table-hover " ng-if="roadCheckBox">
+	                        <thead>
+	                        	<th class="success text-center" translate="ROADINSURANCE">
+	                        	</th>
+	                        </thead>
+	                        <tbody>	                    
+						        <tr>
+		                    		<td class="text-center">
+										<span translate="ROADASSISTANCEPACKAGE"> </span>: <b ng-if="towing" translate="TOWING"></b> <b ng-if="repair" translate="REPAIR"></b> <b ng-if="hotel" translate="HOTEL"></b> <b ng-if="alternative" translate="ALTERNATIVEVEHICLE"></b>
+		                    		</td>
+						        </tr>
+		                    </tbody>
+		                    <thead>
+	                        	<th class="success text-center" style="background-color: #ffff66;" translate="INFOOWNERVEHICLE">
+	                        	</th>
+	                        </thead>
+	                         <tbody>
+		                    	<tr>
+		                    		<td class="text-center">
+										<span translate="OWNERNAME"></span>: <b> {{pic.vehicleOwnerName}}</b>
+		                    		</td>
+		                    	</tr>
+		                    	<tr>
+		                    		<td class="text-center">
+										<span translate="OWNERSURNAME"></span>: <b> {{pic.vehicleOwnerSurname}}</b>
+		                    		</td>
+		                    	</tr>
+		                    	<tr>
+		                    		<td class="text-center">
+										<span translate="OWNERJMBG"></span>: <b> {{pic.vehicleOwnerJmbg}}</b>
+		                    		</td>
+		                    	</tr>
+		                    	<tr>
+		                    		<td class="text-center">
+
+										<span translate=TYPEOFVEHICLE></span>: <b> {{vehicleType.name}}</b>
+
+		                    		</td>
+		                    	</tr>
+		                    	<tr>
+		                    		<td class="text-center">
+										<span translate=YEAROFMANUFACTURE></span>: <b> {{pic.vehicleYear}}</b>
+		                    		</td>
+		                    	</tr>
+		                    	<tr>
+		                    		<td class="text-center">
+										<span translate=LICENCEPLATESNUMBER></span>: <b> {{pic.vehiclePlates}}</b>
+		                    		</td>
+		                    	</tr>
+		                    	<tr>
+		                    		<td class="text-center">
+										<span translate=NUMBEROFCHASSIS></span>: <b> {{pic.vehicleChassis}}</b>
+		                    		</td>
+		                    	</tr>
+		                    </tbody>
+	                    </table>
+	                    
+	                    <hr ng-if="roadCheckBox" style="border: 1; height: 1px; background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(135, 206, 250, 0.75), rgba(0, 0, 0, 0));" />
+	                    <br/>
+	                    <br/>
+					</div>
+				</div>
+			</div>
+			<div class="row">
+	             <div class="col-md-8 col-md-offset-2">
+		              <table class="table table-hover">
+		              		<thead>
+	                        	<th class="info text-center" translate="TOTALPRICEMONEY">
+	                        	</th>
+	                        </thead>
+	                        <tbody>	                    					     
+						        <tr>
+		                    		<td class="warning text-center">
+										<span translate="YOURPRICE"> </span>: <b>{{pic.totalPrice | number:2}} <i class="fa fa-eur"> </i> </b> 
+		                    		</td>
+						        </tr>
+		                    </tbody>
+	                    </table>
+		          </div>
+	        </div>	    
+			<br/>
+			<hr style="border: 1; height: 1px; background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(135, 206, 250, 0.75), rgba(0, 0, 0, 0));" />
+			<div class="row">
+	             <div class="text-center">
+		             <button type="button" class="btn btn-warning" data-toggle="tooltip" data-placement="top" title="Back" ng-click="pic.back()"><i class="fa fa-arrow-left"></i></button> <br/><br/>
+		             <big-paypal-button business="acquier@gmail.com" language-code="en_US" currency-code="EUR"
+    						item-name="insurance"></big-paypal-button>
+		          </div>
+	        </div>
+	            <br/><br/>
+            </div>
+       </div>
+  </div>
+</div> 

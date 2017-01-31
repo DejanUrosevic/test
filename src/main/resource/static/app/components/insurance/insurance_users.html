@@ -1,0 +1,280 @@
+<div style="background: #f7f7f7;" id="all">
+  <div class="clearfix">
+      <div class="item">
+          <div class="container text-white">
+           	
+          <form class="state-form form-horizontal" name="inc.form" ng-submit="inc.submitForm()" novalidate>
+            <br/><br/><br/><br/><br/>
+          	<h2 class="text-center" translate="TRAVELINSURANCE"></h2> 
+          	<br/>
+          	<hr style="border: 1; height: 1px; background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(135, 206, 250, 0.75), rgba(0, 0, 0, 0));" />
+          	<div class="row">
+          		<div class="col-md-8 col-md-offset-2">
+<!-- 		          	<div class="progress"> -->
+<!-- 			          	<div class="progress-bar form-control" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width: 25%; background-color: green;"> -->
+<!-- 							<b style="color: black;" translate="STEP1"> </b> -->
+<!-- 						</div>					 -->
+<!-- 					</div> -->
+					<p class="text-center" style="color: green;" translate="INSURANCEFORM"> </p>
+				</div>
+			</div>
+			<br/>
+
+           	<div class="row">
+          
+              			<div class="col-md-8 col-md-offset-2">  
+              				<br/><br/> 
+              				<table class="table table-hover table-bordered">
+			                        <thead>
+			                        	<th class="info text-center" colspan="3" translate="PARTOFWORLD">	                        	
+			                        	</th>
+			                        </thead>
+			                        <tbody class="text-center">
+				                    	<tr>
+				                    		<td>
+				                    			<label translate="EUNA"> </label> <div class="text-center"> <input type="radio"  name="radio1" value="EUNA" ng-model="inc.world" required /> </div>               
+				                    		</td>
+				                    		<td>
+				                    			<label translate="EUNAA"> </label> <div class="text-center"> <input type="radio" name="radio1" value="EUNAA" ng-model="inc.world"required /> </div>	               
+				                    		</td>
+				                    		<td>
+				                    			<label translate="WHOLEWORLD"> </label> <div class="text-center">  <input type="radio" name="radio"  value="WHOLEWORLD" ng-model="inc.world" required/> </div>		               
+				                    		</td>
+								        </tr>
+								    </tbody>
+							 </table> 
+							 <p class="text-center" ng-show="inc.form.radio1.$error.required && inc.submitted" style="color: red;" translate="RADIOWORLD"> </p>
+						</div>
+				 </div>
+				 
+				 <hr style="border: 1; height: 1px; background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(135, 206, 250, 0.75), rgba(0, 0, 0, 0));" />
+          	  	 <br/>
+          	  	 
+          	  	 <div class="row">
+              			<div class="col-md-8 col-md-offset-2">
+              					<table class="table table-hover table-bordered">
+			                        <thead>
+			                        	<th class="info text-center" colspan="4" translate="INSUREDSUM">	                        	
+			                        	</th>
+			                        </thead>
+			                        <tbody class="text-center">
+				                    	<tr>
+				                    		<td>
+				                    			<label> 10.000 </label> <i class="fa fa-eur"></i> <div class="text-center"> <input type="radio" name="radio2" value="10000" ng-model="inc.money" required/> </div>               
+				                    		</td>
+				                    		<td>
+				                    			<label> 18.000</label> <i class="fa fa-eur"></i> <div class="text-center"> <input type="radio" name="radio2" value="18000" ng-model="inc.money" required/> </div>	               
+				                    		</td>
+				                    		<td>
+				                    			<label> 26.000</label> <i class="fa fa-eur"></i> <div class="text-center">  <input type="radio" name="radio2" value="26000" ng-model="inc.money" required/> </div>		               
+				                    		</td>
+				                    		<td>
+				                    			<label> 34.000</label> <i class="fa fa-eur"></i> <div class="text-center">  <input type="radio" name="radio2" value="34000" ng-model="inc.money" required/> </div>		               
+				                    		</td>
+								        </tr>
+								    </tbody>
+								 </table>
+								 <p class="text-center" ng-show="inc.form.radio2.$error.required && inc.submitted" style="color: red;" translate="RADIOMONEY"> </p>
+						</div>
+				 </div>
+				 <hr style="border: 1; height: 1px; background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(135, 206, 250, 0.75), rgba(0, 0, 0, 0));" />
+          	  	 <br/>
+          	  	 
+			     <div class="row">
+              		<div class="col-md-8 col-md-offset-2">           
+	                    <table class="table table-hover table-bordered text-center">
+	                        <thead>
+	                        	<th class="info text-center" colspan="3" translate="NUMBEROFINSURANCEUSERS">
+	                        	</th>
+	                        </thead>
+	                        <thead>
+	                        	<th class="success text-center" translate="KIDS">
+	                        	</th>
+	                        	<th class="success text-center" translate="GROWNUPS">
+	                        	</th>
+	                        	<th class="success text-center" translate="OLDS">
+	                        	</th>
+	                        </thead>
+		                    <tbody class="form-group" ng-class="{'has-error': inc.submittedUsers}">
+		                    	<tr>
+									<td>
+										<input type="text" class="form-control" maxlength="2" ng-model="inc.kids"/>
+									</td>
+									<td>
+										<input type="text" name="grownInput" class="form-control" maxlength="2" ng-model="inc.grownups" />
+									</td>
+									<td>
+										<input type="text" class="form-control" maxlength="2" ng-model="inc.olds" />
+									</td>
+						        </tr>
+		                    </tbody>
+	                    </table>
+	                    <p class="text-center" ng-show="inc.submittedUsers" style="color: red;" translate="OWNERUSER"> </p>
+              		</div>
+              	</div>
+					
+          	  <hr style="border: 1; height: 1px; background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(135, 206, 250, 0.75), rgba(0, 0, 0, 0));" />
+          	  <br/>
+              <div class="row">
+	              	<div class="col-md-8 col-md-offset-2">                    
+	                  <table class="table table-hover table-bordered text-center">
+	                  	<thead>
+	                  		<th class="info text-center" colspan="2" translate="HOWLONGYOURTRIP">	                    		
+	                    	</th>
+	                  	</thead>
+	                    <tbody class="form-group" ng-class="{'has-error': (inc.form.dateInsurance1.$error.required || inc.form.dateInsurance2.$error.required) && inc.submitted}">                  	
+					        <tr>
+					        	<td class="input-group">
+								    <input type="text" name="dateInsurance1" class="form-control" uib-datepicker-popup="dd-MMMM-yyyy" ng-model="inc.dt1" is-open="popup1.opened" datepicker-options="options"close-text="Close" required/>
+									<span class="input-group-btn">
+									     <button type="button" class="btn btn-default" ng-click="open1()"><i class="glyphicon glyphicon-calendar"></i></button>
+									</span>
+
+									<!--  <span class="input-group-addon" translate="TO"></span>	-->			
+									<input type="text" name="dateInsurance2" class="form-control" uib-datepicker-popup="dd-MMMM-yyyy" ng-model="inc.dt2" is-open="popup2.opened" datepicker-options="options2" close-text="Close" required/>
+									<span class="input-group-btn">
+									     <button type="button" class="btn btn-default" ng-click="open2()"><i class="glyphicon glyphicon-calendar"></i></button>
+									</span>				        		
+					        	</td>
+					        </tr>				     		        
+	                    </tbody>
+	                  </table>
+	                  <p class="text-center" ng-show="(inc.form.dateInsurance1.$error.required || inc.form.dateInsurance2.$error.required) && inc.submitted" style="color: red;" translate="DATEVALIDATION"> </p>
+	              	</div>
+              	</div>
+              	
+              	<hr style="border: 1; height: 1px; background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(135, 206, 250, 0.75), rgba(0, 0, 0, 0));" />
+              	<br/>
+              	              	
+              	<div class="row">
+              		<div class="col-md-8 col-md-offset-2">
+              			<div class="form-group">
+					        <div class="col-sm-8">
+					           <a class="text-large text-thin" translate=DOYOUWANTINSURANCESPORTRIKS></a>&nbsp&nbsp<input type="checkbox" ng-model="inc.sportCheckBox" ng-click="inc.closeOthers()"/> 
+					        </div>
+					    </div> 
+					    <br/>          
+	                    <table class="table table-hover table-bordered" ng-if="inc.sportCheckBox">
+	                    	<thead>
+	                        	<th class="info text-center" colspan="2" translate="SPORTINSURANCERISKS">
+	                        	</th>
+	                        </thead>
+	                        <thead>
+	                        	<th class="success text-center" translate="CHOOSEONEOFTHESPORTS">                     		
+	                        	</th>
+	                        </thead>
+	                        <tbody>
+		                    	<tr>
+		                    		<td>
+		                    			<div class="col-md-6 col-md-offset-3">
+			                    			<select class="form-control" name="chooseSport" ng-options="sport.subname for sport in inc.sports track by sport.subname" ng-model="inc.selectedSport" required>
+											</select>									
+		                    			</div>
+		                    		</td>
+						        </tr>
+		                    </tbody>
+	                    </table>
+	                    <p class="text-center" ng-show="inc.form.chooseSport.$error.required && inc.submitted" style="color: red;" translate="SPORTCHOOSE"> </p>
+	                </div>
+	            </div>  
+              	
+              	<hr style="border: 1; height: 1px; background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(135, 206, 250, 0.75), rgba(0, 0, 0, 0));" />
+              	<br/>
+              	
+              	<div class="row">
+              			<div class="col-md-8 col-md-offset-2">
+              					<table class="table table-hover table-bordered">
+			                    	<thead>
+			                        	<th class="info text-center" colspan="4" translate="OPTIONALLYINSURANCES">
+			                        	</th>
+			                        </thead>
+			                        <tbody>
+			                        	<tr>	                    
+				                    		<td class="success text-center" colspan="3">
+				                    			<b translate="HOMEINSURANCE"> </b>	
+				                    		</td>		                    			
+				                    	</tr>
+				                    	<tr>
+				                    		<td colspan="3">
+				                    			&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<i class="fa fa-home" style="font-size: 40px;"></i> <span style="font-size: 20px;" translate="INSURANCEHOMEORFLAT"></span>
+				                    			&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp <input name="home" type="checkbox" ng-model="inc.homeCheckBox" ng-click="inc.closeOthers($event)"/>
+				                    			<i class="fa fa-info-circle" ng-click="inc.openH()" style="font-size: 18px;" data-toggle="tooltip" data-placement="top" title="{{'HOMEINSURACECOVERING'|translate}}"></i>
+				                    		</td>
+				                    	</tr>
+				                    	<tr ng-if="inc.homeCheckBox">
+				                    		<td colspan="3">
+				                    				<div class="col-md-5 col-md-offset-4" ng-class="{'has-error': inc.form.homeArea.$error.required && inc.submitted}"><input type="text" class="form-control" ng-model="inc.homearea" ng-model-options="{updateOn: 'default blur', debounce: { 'default': 500, 'blur': 0}}" id="homeArea" name="homeArea" placeholder="{{'HOMEAREA'|translate}}" ng-pattern="/^[0-9]+$/" required> </div> <br/><br/>
+									            	<p class="text-center" ng-show="inc.form.homeArea.$error.pattern" style="color: red;" translate="OWNERAREAFORM"> </p>
+									            	<p class="text-center" ng-show="(inc.form.homeArea.$touched && inc.form.homeArea.$error.required) || (inc.form.homeArea.$error.required && inc.submitted)" style="color: red;" translate="OWNERAREAREQUIREDFORM"> </p>
+									            	 				
+									            	<div class="col-md-5 col-md-offset-4" ng-class="{'has-error': inc.form.ageOfHome.$error.required && inc.submitted}"><input type="text" class="form-control" ng-model="inc.ageofhome" ng-model-options="{updateOn: 'default blur', debounce: { 'default': 500, 'blur': 0}}" id="ageOfHome" name="ageOfHome" placeholder="{{'CONSTRUCTIONYEAR'|translate}}" maxlength="4" ng-pattern="/^[0-9]{4}$/" required></div> <br/><br/>
+           											<p class="text-center" ng-show="inc.form.ageOfHome.$error.pattern" style="color: red;" translate="OWNERCONSTRUCTIONYEARREQUIREDFORM"> </p>
+           											<p class="text-center" ng-show="(inc.form.ageOfHome.$touched && inc.form.ageOfHome.$error.required) || (inc.form.ageOfHome.$error.required && inc.submitted)" style="color: red;" translate="OWNERCONSTRUCTIONYEARREQUIREDFORM"> </p>
+           										
+           											<div class="col-md-5 col-md-offset-4" ng-class="{'has-error': inc.form.estimatedValueOfHome.$error.required && inc.submitted}"><input type="text" class="form-control" ng-model="inc.estimatedvalueofhome" ng-model-options="{updateOn: 'default blur', debounce: { 'default': 500, 'blur': 0}}" id="estimatedvalueofhome" name="estimatedValueOfHome" placeholder="{{'ESTIMATEDVALUEOFHOME'|translate}}"  maxlength="40" ng-pattern="/^[0-9]{1,40}$/" required> </div>  <br/> <br/>
+           											<p class="text-center" ng-show="inc.form.estimatedValueOfHome.$error.pattern" style="color: red;" translate="OWNERESTIMATEDVALUEOFHOMEREQUIREDFORM"> </p>
+           											<p class="text-center" ng-show="(inc.form.estimatedValueOfHome.$touched && inc.form.estimatedValueOfHome.$error.required) || (inc.form.estimatedValueOfHome.$error.required && inc.submitted)" style="color: red;" translate="OWNERESTIMATEDVALUEOFHOMEREQUIREDFORM"> </p>
+				                    		</td>
+				                    	</tr>
+				                    	<tr class="text-center" ng-if="inc.homeCheckBox">
+				                    		<td>
+				                    			 <span translate="FIREINSURANCE"></span>    <br/>
+				                    			 <span translate="FLOODINSURANCE"></span>   <br/>
+				                    			 <span translate="THEFTINSURANCE"></span>    <br/>
+				                    			 <span translate="EARTHQUAKEINSURANCE"></span>   <br/>
+				                    			 <p class="text-center" ng-show="inc.homeInsuranceWarning" style="color: red;" translate="HOMEINSURANCEWARNING"> </p>
+				                    		</td>
+				                    		<td>
+				                    			<input type="checkbox" ng-model="inc.fire"/> <br/>
+				                    			<input type="checkbox" ng-model="inc.flood"/> <br/>
+				                    			<input type="checkbox" ng-model="inc.theft"/> <br/>
+				                    			<input type="checkbox" ng-model="inc.earthshake"/> <br/>
+				                    		</td>
+				                    	</tr>
+				                    	<tr>	                    
+				                    		<td class="success text-center" colspan="3">
+				                    			<b translate="ROADINSURANCE"> </b>	
+				                    		</td>		                    			
+				                    	</tr>
+				                    	<tr>
+				                    		<td colspan="3">
+				                    			&nbsp&nbsp&nbsp&nbsp <i class="fa fa-car" style="font-size: 40px;"></i> <span style="font-size: 20px;" translate="INSURANCEFORROADSIDEASSISTANCE"> </span>
+				                    			&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp <input name="road" type="checkbox" ng-model="inc.roadCheckBox" ng-click="inc.closeOthers($event)"/>
+				                    			<i class="fa fa-info-circle" ng-click="inc.openV()" style="font-size: 18px;"></i>
+				                    		</td>
+				                    	</tr>
+				                    	<tr class="text-center" ng-if="inc.roadCheckBox">
+				                    		<td>
+				                    			 <span translate="TOWING"></span>    <br/>
+				                    			 <span translate="REPAIR"></span>   <br/>
+				                    			 <span translate="HOTEL"></span>    <br/>
+				                    			 <span translate="ALTERNATIVEVEHICLE"></span>   <br/>
+				                    			 <p class="text-center" ng-show="inc.roadInsuranceWarning" style="color: red;" translate="HOMEINSURANCEWARNING"> </p>
+				                    		</td>
+				                    		<td>
+				                    			<input type="checkbox" ng-model="inc.towing"/> <br/>
+				                    			<input type="checkbox" ng-model="inc.repair"/> <br/>
+				                    			<input type="checkbox" ng-model="inc.hotel"/> <br/>
+				                    			<input type="checkbox" ng-model="inc.alternative"/> <br/>
+				                    		</td>
+				                    	</tr>
+			                        </tbody>
+			                    </table>
+			            </div>
+			    </div>
+			    
+              	<br/>
+              	<hr style="border: 1; height: 1px; background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(135, 206, 250, 0.75), rgba(0, 0, 0, 0));" />
+              	            
+              		<div class="row">
+              			<div class="text-center">
+	              			<a ui-sref="home"> <button type="button" class="btn btn-warning" data-toggle="tooltip" data-placement="top" title="Back"><i class="fa fa-arrow-left"></i></button> </a>
+	                         <button type="submit" class="btn btn-success" data-toggle="tooltip" data-placement="top" title="Next"><i class="fa fa-arrow-right"></i></button>
+	                    </div>
+              		</div>
+              	<br/><br/>
+              	</form>
+            </div>
+       </div>
+  </div>
+</div> 

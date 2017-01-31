@@ -1,0 +1,164 @@
+<div style="background: #f7f7f7;" id="all">
+  <div class="clearfix">
+      <div class="item">
+          <div class="container text-white">
+            <br/><br/><br/><br/><br/>
+          	<h2 class="text-center" translate="TRAVELINSURANCE"></h2> 
+          	<br/>
+          	<hr style="border: 1; height: 1px; background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(135, 206, 250, 0.75), rgba(0, 0, 0, 0));" />
+          	<div class="row">
+          		<div class="col-md-8 col-md-offset-2">
+<!-- 		          	<div class="progress"> -->
+<!-- 			          	<div class="progress-bar form-control" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width: 25%; background-color: green;"> -->
+							
+<!-- 						</div> -->
+<!-- 						<div class="progress-bar form-control" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100" style="width:25%; background-color: blue;"> -->
+<!-- 							<b style="color: white;" translate="STEP2"> </b> -->
+<!-- 						</div> -->
+<!-- 						<div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100" style="width:0%"> -->
+<!-- 							Ovo je trece -->
+<!-- 						</div> -->
+<!-- 					</div> -->
+					<p class="text-center" style="color: blue;" translate="TOTALPRICE"> </p>
+				</div>
+			</div>
+			<br/>
+			
+			<div class="row">
+				<div class="col-md-8 col-md-offset-2">
+					<div class="text-center">
+						
+						<table class="table table-hover ">
+	                    	<thead>
+	                        	<th class="info text-center" colspan="2" translate="INSURANCEPOLICY">
+	                        	</th>                        
+	                        </thead>
+	                        <thead>
+	                        	<th class="success text-center" translate="TRAVELINSURANCE">
+	                        	</th>
+	                        </thead>
+	                        <tbody>
+		                    	<tr>
+		                    		<td class="text-center">
+										<span translate="REGION"> </span>: <b translate="{{world}}"></b>
+		                    		</td>
+						        </tr>
+						        <tr>
+		                    		<td class="text-center">
+										<span translate="INSUREDSUM"> </span>: <b> {{money}}</b> <i class="fa fa-eur"> </i>
+		                    		</td>
+						        </tr>
+						        <tr>
+		                    		<td class="text-center">
+										<span translate="NUMBEROFINSURANCEUSERS"> </span>: <br/>
+										1. <span translate="KIDS"> </span>: <b> {{kids}}</b> <br/>
+										&nbsp 2. <span translate="GROWNUPS"> </span>:  <b> {{grownups}}</b> <br/>
+										3. <span translate="OLDS"> </span>:  <b> {{olds}}</b> <br/>
+		                    		</td>
+						        </tr>
+						        <tr>
+		                    		<td class="text-center">
+										<span translate="EFFECTIVEDATE"> </span>: <br/>
+										<b> {{dt1 | date:'dd.MM.yyyy'}} </b> do <b> {{dt2 | date:'dd.MM.yyyy'}}</b>
+		                    		</td>
+						        </tr>
+						        <tr ng-if="sportCheckBox">
+		                    		<td class="text-center">
+										<span translate="SPORTCHOSEN"> </span>: <b> {{selectedSport.subname}}</b>
+		                    		</td>
+						        </tr>
+		                    </tbody>
+	                    </table>
+	                    <label class="text-center form-control" style="background-color: #ffff66;"> <u translate="TOTALPRICETRAVEL"></u> <b>: {{insuranceInfo.travelInsurancePrice}} </b></label>
+
+	                    <hr style="border: 1; height: 1px; background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(135, 206, 250, 0.75), rgba(0, 0, 0, 0));" />
+	                    <br/>
+	                    <br/>
+	                    
+	                    <table class="table table-hover" ng-if="homeCheckBox">
+	                        <thead>
+	                        	<th class="success text-center" translate="INSURANCEHOMEORFLAT">
+	                        	</th>
+	                        </thead>
+	                        <tbody>	                    
+						        <tr>
+		                    		<td class="text-center">
+										<span translate="PROTECTIONAGAINST"></span>: <b ng-if="fire" translate="FIRE"></b> <b ng-if="flood" translate="FLOOD"></b> <b ng-if="theft" translate="THEFT"></b> <b ng-if="earthshaker" translate="EARTHSHAKE"></b>
+		                    		</td>
+						        </tr>
+		                    </tbody>
+	                    </table>
+	                    <label ng-if="homeCheckBox" class="text-center form-control" style="background-color: #ffff66;"> <u translate="TOTALPRICEHOME"> </u>: <b>{{insuranceInfo.homeInsurancePrice}}</b></label>
+
+	                    <hr ng-if="homeCheckBox" style="border: 1; height: 1px; background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(135, 206, 250, 0.75), rgba(0, 0, 0, 0));" />
+	                    <br/>
+	                    <br/>
+	                    
+	                    <table class="table table-hover " ng-if="roadCheckBox">
+	                        <thead>
+	                        	<th class="success text-center" translate="ROADINSURANCE">
+	                        	</th>
+	                        </thead>
+	                        <tbody>	                    
+						        <tr>
+		                    		<td class="text-center">
+										<span translate="ROADASSISTANCEPACKAGE"> </span>: <b ng-if="towing" translate="TOWING"></b> <b ng-if="repair" translate="REPAIR"></b> <b ng-if="hotel" translate="HOTEL"></b> <b ng-if="alternative" translate="ALTERNATIVEVEHICLE"></b>
+		                    		</td>
+						        </tr>
+		                    </tbody>
+	                    </table>
+	                    
+	                    <label ng-if="roadCheckBox" class="success text-center form-control" style="background-color: #ffff66;"> <u translate="TOTALPRICEROAD"> </u>: <b>{{insuranceInfo.carInsurancePrice}}</b></label>
+
+	                    <hr ng-if="roadCheckBox" style="border: 1; height: 1px; background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(135, 206, 250, 0.75), rgba(0, 0, 0, 0));" />
+	                    <br/>
+	                    <br/>
+					</div>
+				</div>
+			</div>
+			<div class="row">
+	             <div class="col-md-8 col-md-offset-2">
+		              <table class="table table-hover">
+		              		<thead>
+	                        	<th class="info text-center" translate="TOTALPRICEMONEY">
+	                        	</th>
+	                        </thead>
+	                        <tbody>	                    
+						        <tr>
+		                    		<td class="text-center">
+										<span translate="INSURANCEPREMIUM"> </span>: <b>{{insuranceInfo.price | number:2}} </b>
+		                    		</td>
+						        </tr>
+						        <tr>
+		                    		<td class="text-center">
+										<span translate="DISCOUNT"> </span>: <b>{{(insuranceInfo.price - insuranceInfo.discountPrice) | number:2}} </b>
+		                    		</td>
+						        </tr>
+						        <tr>
+		                    		<td class="text-center">
+										<span translate="TAX"> </span>: <b>{{(insuranceInfo.amount * 0.2) | number:2}} </b>
+		                    		</td>
+						        </tr>
+						        <tr>
+		                    		<td class="warning text-center">
+										<span translate="YOURPRICE"> </span>: <b>{{(insuranceInfo.amount + insuranceInfo.amount * 0.2) | number:2}} RSD </b>
+		                    		</td>
+						        </tr>
+		                    </tbody>
+	                    </table>
+		          </div>
+	        </div>
+	        
+			<br/>
+			<hr style="border: 1; height: 1px; background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(135, 206, 250, 0.75), rgba(0, 0, 0, 0));" />
+			<div class="row">
+	             <div class="text-center">
+		             <a ui-sref="insurance"> <button type="button" class="btn btn-warning" data-toggle="tooltip" data-placement="top" title="Back"><i class="fa fa-arrow-left"></i></button> </a>
+		             <button type="button" class="btn btn-success" data-toggle="tooltip" data-placement="top" title="Next" ng-click="tpc.next()"><i class="fa fa-arrow-right"></i></button>
+		          </div>
+	        </div>
+	            <br/><br/>
+            </div>
+       </div>
+  </div>
+</div> 
